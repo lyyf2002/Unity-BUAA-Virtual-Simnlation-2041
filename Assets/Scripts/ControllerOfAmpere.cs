@@ -47,11 +47,12 @@ public class ControllerOfAmpere : MonoBehaviour
 
         // double _length = diaphragm.transform.position.x - mercuryLamp.transform.position.x;
         double _volt = (double)controllerOfVoltmeter.volt / 10f;
+        double _volt2 = (double)controllerOfVoltmeter.volt2 / 1000f;
         int _int_volt = (int)_volt;
 
         if (controllerOfVoltmeter.modeoftest == 1)
         {
-            Debug.Log("test");
+            //Debug.Log("test");
             double _zero_volt = 0;
             if (_waveLength == 1)
             {
@@ -73,9 +74,10 @@ public class ControllerOfAmpere : MonoBehaviour
             {
                 _zero_volt = 0.519;
             }
-
-            if (System.Math.Abs(_volt - _zero_volt) < 0.001) return 0;
-            else return (_volt - _zero_volt) / 5 * 10;
+            Debug.Log(_zero_volt);
+            Debug.Log(_volt2);
+            if (System.Math.Abs(_volt2 - _zero_volt) < 0.001) return 0;
+            else return (_volt2 - _zero_volt) / 5 * 1000;
         }
         else
         {
@@ -112,11 +114,13 @@ public class ControllerOfAmpere : MonoBehaviour
                 ampere_2 = _int_volt == -1 ? 0.1 : amperes[_int_volt / 5 + 1];
             }
             //Debug.Log((double)(_volt - ((int)_int_volt / 5 * 5)) / 5f * (ampere_2 - ampere_1));
-            Debug.Log(ampere_2);
-            Debug.Log(ampere_1);
+            //Debug.Log(ampere_2);
+            //Debug.Log(ampere_1);
             ampere = (double)(_volt - ((int)_int_volt / 5 * 5)) / 5f * (ampere_2 - ampere_1) + ampere_1;
-
-            return ampere + this.randomValue;
+            double d = (_diaphragmSize == 0) ? 0 :
+                (_diaphragmSize == 1) ? 0.7 :
+                (_diaphragmSize == 2) ? 0.85 : 1;
+            return ampere*d + this.randomValue;
 
         }
     }
