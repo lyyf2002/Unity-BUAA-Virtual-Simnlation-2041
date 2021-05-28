@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
 using System.Threading;
+using System;
+using System.Runtime.InteropServices;
 public class ControllerOfVoltmeter : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -15,6 +17,11 @@ public class ControllerOfVoltmeter : MonoBehaviour
     public ControllerOfAmpere controllerOfAmpere;
     public int modeoftest;
     public int blink;
+
+    // Dirty: show native message box
+    [DllImport("User32.dll", SetLastError = true, ThrowOnUnmappableChar = true, CharSet = CharSet.Auto)]
+    public static extern int MessageBox(IntPtr handle, String message, String title, int type);
+
     void Start()
     {
         count = 1;
@@ -115,13 +122,16 @@ public class ControllerOfVoltmeter : MonoBehaviour
     public void setZero()
     {
         controllerOfAmpere.reset();
-        UnityEditor.EditorUtility.DisplayDialog("提示", "调零完成", "开始实验");
+        // UnityEditor.EditorUtility.DisplayDialog("提示", "调零完成", "开始实验");
+
+        MessageBox(IntPtr.Zero, "调零完成，开始实验", "北航基物实验 2041", 0);
     }
     public void addVolt()
     {
         if (!controllerOfAmpere.isReset)
         {
-            UnityEditor.EditorUtility.DisplayDialog("提示", "请先进行调零", "确认");
+            // UnityEditor.EditorUtility.DisplayDialog("提示", "请先进行调零", "确认");
+            MessageBox(IntPtr.Zero, "请先进行调零", "北航基物实验 2041", 0);
             return;
         }
             if (modeoftest == 1? (volt2 + mode2 <= 2000) : (volt + mode <= 500))
@@ -139,7 +149,8 @@ public class ControllerOfVoltmeter : MonoBehaviour
     {
         if (!controllerOfAmpere.isReset)
         {
-            UnityEditor.EditorUtility.DisplayDialog("提示", "请先进行调零", "确认");
+            // UnityEditor.EditorUtility.DisplayDialog("提示", "请先进行调零", "确认");
+            MessageBox(IntPtr.Zero, "请先进行调零", "北航基物实验 2041", 0);
             return;
         }
         if (modeoftest == 1 ? (volt2 - mode2 >= 0) : (volt - mode >= -10))
@@ -158,7 +169,8 @@ public class ControllerOfVoltmeter : MonoBehaviour
     {
         if (!controllerOfAmpere.isReset)
         {
-            UnityEditor.EditorUtility.DisplayDialog("提示", "请先进行调零", "确认");
+            // UnityEditor.EditorUtility.DisplayDialog("提示", "请先进行调零", "确认");
+            MessageBox(IntPtr.Zero, "请先进行调零", "北航基物实验 2041", 0);
             return;
         }
         if(modeoftest == 1)
@@ -183,7 +195,8 @@ public class ControllerOfVoltmeter : MonoBehaviour
     {
         if (!controllerOfAmpere.isReset)
         {
-            UnityEditor.EditorUtility.DisplayDialog("提示", "请先进行调零", "确认");
+            // UnityEditor.EditorUtility.DisplayDialog("提示", "请先进行调零", "确认");
+            MessageBox(IntPtr.Zero, "请先进行调零", "北航基物实验 2041", 0);
             return;
         }
         if (modeoftest == 1)
