@@ -776,7 +776,7 @@ MonoBehaviour:
   randomValue: 0
   isReset: 0
   diaphragmController: {fileID: 101915252}
-  diaphragm: {fileID: 101915247}
+  diaphragm: {fileID: 1636221860}
   mercuryLamp: {fileID: 0}
   controllerOfVoltmeter: {fileID: 665588401}
 --- !u!4 &290570481

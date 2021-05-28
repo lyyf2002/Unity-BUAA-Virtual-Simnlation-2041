@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1920
     height: 1007
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Console
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 392}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 342}
   m_MaxSize: {x: 12004, y: 8042}
   vertical: 0
-  controlID: 83
+  controlID: 104
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 342}
   m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
-  controlID: 84
+  controlID: 78
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 85
+  controlID: 79
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -343,21 +343,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts
+  - Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\93252\Documents\WeChat Files\wxid_sn2p6s3ncyry22\FileStorage\File\2021-05\Unity-BUAA-Virtual-Simnlation-2041-main
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 523f0000
-    m_LastClickedID: 16210
+    m_SelectedIDs: 723d0000
+    m_LastClickedID: 15730
     m_ExpandedIDs: 00000000723d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -411,8 +411,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: ce080000
-    m_LastClickedInstanceID: 2254
+    m_SelectedInstanceIDs: 9cedffff
+    m_LastClickedInstanceID: -4708
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000bc3a0000
     m_RenameOverlay:
@@ -569,9 +569,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.4986591, y: 1.6076854, z: 1.877008}
+    m_Target: {x: -0.31048295, y: 4.4310703, z: -0.89998835}
     speed: 2
-    m_Value: {x: 1.4986591, y: 1.6076854, z: 1.877008}
+    m_Value: {x: -0.31048295, y: 4.4310703, z: -0.89998835}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -618,13 +618,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.10864022, y: 0.4170355, z: 0.050287854, w: 0.90098864}
+    m_Target: {x: 0.32789898, y: 0.046738006, z: -0.016244119, w: 0.943433}
     speed: 2
-    m_Value: {x: -0.10863856, y: 0.4170291, z: 0.050287087, w: 0.90097487}
+    m_Value: {x: 0.3278938, y: 0.046737265, z: -0.016243862, w: 0.943418}
   m_Size:
-    m_Target: 4.3927464
+    m_Target: 2.3043232
     speed: 2
-    m_Value: 4.6927466
+    m_Value: 2.3043232
   m_Ortho:
     m_Target: 0
     speed: 2
